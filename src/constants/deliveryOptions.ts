@@ -1,0 +1,1 @@
+export const deliveryOptions = ["Home-Delivery", "Store-Pickup", "Express-Delivery"];
