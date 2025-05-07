@@ -4,6 +4,7 @@ const HomePage = async ({ searchParams }: { searchParams: TSearchParams }) => {
   return (
     <div>
       <HomePageManage searchParams={searchParams} />
+      
     </div>
   );
 };

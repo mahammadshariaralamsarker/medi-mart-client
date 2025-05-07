@@ -1,12 +1,11 @@
-"use client";
+'use client'
 import { useEffect, useState } from "react";
 import { Slider } from "@/components/ui/slider";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { X, Filter } from "lucide-react"; 
-
+import { X, Filter } from "lucide-react";
 
 export default function FilterSidebar({
   medicineCat,
@@ -40,10 +39,9 @@ export default function FilterSidebar({
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <>
-      {/*  Filter Button For Mobile Device */}
-
       {showFilterButton && (
         <Button
           onClick={() => setIsOpen(true)}
@@ -55,9 +53,9 @@ export default function FilterSidebar({
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-fit bg-slate-50  p-6 w-72 transition-transform duration-300 z-50 
-        ${isOpen ? "translate-x-0" : "-translate-x-full"} 
-        lg:translate-x-0 lg:relative lg:w-60 lg:h-fit lg:block`}
+        className={`lg:sticky lg:top-16 lg:left-0 lg:h-fit bg-slate-50 p-6 w-72 transition-transform duration-300 z-50 ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } lg:translate-x-0 lg:relative lg:w-60 lg:h-fit lg:block`}
       >
         {/* Close Button (Mobile) */}
         <button
@@ -83,10 +81,10 @@ export default function FilterSidebar({
           <h2 className="text-lg font-semibold mb-4">Price</h2>
           <div className="flex items-center justify-between text-sm mb-2">
             <span>$0</span>
-            <span>$5000</span>
+            <span>$500</span>
           </div>
           <Slider
-            max={5000}
+            max={500}
             step={1}
             onValueChange={(value) => {
               setMedicinePrice(value);
@@ -116,7 +114,9 @@ export default function FilterSidebar({
 
         {/* Brands */}
         <div className="mb-6">
-          <h2 className="text-lg font-semibold mb-4">Prescription Required</h2>
+          <h2 className="text-lg font-semibold mb-4">
+            Prescription Required
+          </h2>
           <RadioGroup className="space-y-2">
             <div className="flex items-center space-x-2">
               <RadioGroupItem

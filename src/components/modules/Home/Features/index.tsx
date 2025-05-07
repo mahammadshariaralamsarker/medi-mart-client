@@ -18,8 +18,8 @@ const FeaturesSection = ({
             sectionSubTitle="Latest Medicines Here"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5 lg:gap-6 2xl:grid-cols-4 2xl:gap-8">
-          {allMedicineInfo?.slice(0, 6)?.map((item) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 lg:gap-6 2xl:grid-cols-4 2xl:gap-8">
+          {allMedicineInfo?.slice(0, 4)?.map((item) => (
             <FeaturesItem medicine={item} key={item?._id} />
           ))}
         </div>
