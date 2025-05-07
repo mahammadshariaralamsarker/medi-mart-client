@@ -10,7 +10,9 @@ const AllMedicines = async ({ medicines }: { medicines: TMedicine[] }) => {
   return (
     <div className="flex gap-5 my-10 relative">
       {/* Sidebar */}
-      <FilterSidebar medicineCat={medicineCat} /> 
+      <aside className="hidden lg:block w-72 sticky top-16 self-start h-[calc(100vh-4rem)] overflow-auto bg-slate-50 rounded-md shadow-sm">
+        <FilterSidebar medicineCat={medicineCat} />
+      </aside> 
       <div className="flex-1">
         <div className="grid xl:grid-cols-3 xl:gap-5 lg:grid-cols-3 lg:gap-3 md:grid-cols-2 md:gap-3 grid-cols-1 gap-2">
           <MedicinesList medicines={medicines} />

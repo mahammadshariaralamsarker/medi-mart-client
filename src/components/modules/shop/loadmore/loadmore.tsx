@@ -28,19 +28,21 @@ const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
      };
 
      useEffect(()=>{
-        if(inView && hasMore){
+        if(inView ){
             loadMoreMedicines()
         }
      },[inView, hasMore])
   return (
     <>
       <MedicinesList medicines={medicinesList} />
+      {inView && (
       <div
         className="flex justify-center items-center p-4 col-span-1 sm:col-span-2 md:col-span-3"
         ref={ref}
       >
-        <Spinner />
+        {<Spinner />}
       </div>
+      )}
     </>
   );
 }
