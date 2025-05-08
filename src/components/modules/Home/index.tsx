@@ -5,6 +5,11 @@ import FeaturesSection from "./Features";
 import CustomerReviews from "./CustomerReviews";
 import { getAllMedicines } from "@/services/Medicine";
 import { getAllReviews } from "@/services/ReviewServices";
+import SpecialSection from "./SpecialSection";
+import FeatureStories from "./FeatueStories";
+import NewsletterSection from "./NewsLetterSection";
+import MoreInfoPage from "./MoreInformation";
+import FAQPage from "./FAQ";
 
 const HomePageManage = async ({ searchParams }: { searchParams: any }) => {
   const { query } = await searchParams;
@@ -20,6 +25,11 @@ const HomePageManage = async ({ searchParams }: { searchParams: any }) => {
       <Banner />
       <FeaturesSection allMedicineInfo={allMedicineInfo?.data} />
       <CustomerReviews allReviews={allReviews} />
+      <FeatureStories />
+      <SpecialSection />
+      <NewsletterSection />
+      <MoreInfoPage/>
+      <FAQPage/>
     </div>
   );
 };
