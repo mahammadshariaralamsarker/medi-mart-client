@@ -20,7 +20,7 @@ import { protectedRoutes } from "@/constants";
 import { useAppSelector } from "@/redux/hooks";
 import { cartMedicineSelector } from "@/redux/features/cart/cartSlice";
 export default function Navbar() {
-  const { user, setIsLoading } = useUser();
+  const { user, setIsLoading } = useUser(); 
   const pathname = usePathname();
   const router = useRouter();
   const medicinesAll = useAppSelector(cartMedicineSelector);
@@ -40,7 +40,7 @@ export default function Navbar() {
         <Logo />
         <Link href="/">Medi Mart</Link>
       </h1>
-      <div className="max-w-md hidden md:flex flex-grow">
+      <div className="max-w-lg hidden md:flex flex-grow">
         <nav>
         <ul className="flex items-center gap-3 md:gap-7">
           <li>
@@ -73,6 +73,36 @@ export default function Navbar() {
             About Us
           </Link>
           </li>
+          <li>
+          <Link
+            href="/services"
+            className={`transition-all hover:text-primary ${
+            pathname === "/services" ? "text-primary font-bold" : ""
+            }`}
+          >
+            Services
+          </Link>
+          </li>
+          <li>
+          <Link
+            href="/blog"
+            className={`transition-all hover:text-primary ${
+            pathname === "/blog" ? "text-primary font-bold" : ""
+            }`}
+          >
+            Blog
+          </Link>
+          </li>
+          <li>
+          <Link
+            href="/contact"
+            className={`transition-all hover:text-primary ${
+            pathname === "/contact" ? "text-primary font-bold" : ""
+            }`}
+          >
+            Contact Us
+          </Link>
+          </li>
         </ul>
         </nav>
       </div>
@@ -103,6 +133,16 @@ export default function Navbar() {
           <DropdownMenuItem>
             <Link href="/about">About</Link>
           </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/services">Services</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/blog">Blog</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Link href="/contact">Contact</Link>
+          </DropdownMenuItem>
+          <DropdownMenuSeparator />
           {user && (
             <DropdownMenuItem>
             <Link href="/orders">Order History</Link>

@@ -1,6 +1,5 @@
 "use client";
 import { Button } from "@/components/ui/button";
-
 import {
   Form,
   FormControl,
@@ -31,23 +30,16 @@ const LoginForm = () => {
   });
   const {
     formState: { isSubmitting },
+    setValue,
   } = form;
 
-  // Register Form Handle
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-    console.log(data);
     try {
-      // Form Data Send to Server action
       const res = await userLogin(data);
       setIsLoading(true);
-      // Toast Handle
       if (res?.success) {
         toast.success(res?.message);
-        if (redirect) {
-          router.push(redirect);
-        } else {
-          router.push("/");
-        }
+        router.push(redirect || "/");
       } else {
         toast.error(res?.message);
       }
@@ -56,11 +48,21 @@ const LoginForm = () => {
     }
   };
 
+  // Autofill Handlers
+  const handleUserFill = () => {
+    setValue("identifier", "customer@gmail.com");
+    setValue("password", "12345678");
+  };
+
+  const handleAdminFill = () => {
+    setValue("identifier", "admin@gmail.com");
+    setValue("password", "12345678");
+  };
+
   return (
     <div className="w-full min-h-screen flex justify-center items-center">
       <div className="max-w-md w-full bg-white border p-7 md:p-10 rounded">
         <div className="flex gap-2 border-b pb-3 mb-6">
-          {/* <ShopZenLogo /> */}
           <div className="space-y-1">
             <h2 className="font-bold text-lg md:text-2xl">Medi Mart</h2>
             <p className="text-xs">Welcome Back!</p>
@@ -88,17 +90,12 @@ const LoginForm = () => {
                 <FormItem>
                   <FormLabel>Password</FormLabel>
                   <FormControl>
-                    <Input
-                      type="password"
-                      {...field}
-                      value={field.value || ""}
-                    />
+                    <Input type="password" {...field} value={field.value || ""} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-
             <Button type="submit" className="w-full mt-2">
               {isSubmitting ? (
                 <LoaderCircle className="animate-spin" />
@@ -113,17 +110,15 @@ const LoginForm = () => {
               </Link>
             </p>
           </form>
-          <div className="flex justify-between items-center mt-5">
-          <div className="mt-5  text-sm">
-              <h1 className="underline">User</h1>
-              <h1> Email: customer@gmail.com</h1>
-              <p>Password: 12345678</p>
-            </div>
-            <div className="mt-5  text-sm">
-              <h1 className="underline">Admin</h1>
-              <h1> Email: admin@gmail.com</h1>
-              <p>Password: 12345678</p>
-            </div>
+
+          {/* Credential Buttons */}
+          <div className="flex justify-between items-center mt-6 gap-2">
+            <Button variant="outline" className="w-full" onClick={handleUserFill}>
+              Use User Credentials
+            </Button>
+            <Button variant="outline" className="w-full " onClick={handleAdminFill}>
+              Use Admin Credentials
+            </Button>
           </div>
         </Form>
       </div>
