@@ -48,7 +48,7 @@ const Footer = () => {
 
               <li>
                 <Link
-                  href="/"
+                  href="#"
                   rel="noreferrer"
                   target="_blank"
                   className="text-primary transition hover:text-primary/75"
@@ -71,7 +71,7 @@ const Footer = () => {
 
               <li>
                 <Link
-                  href="/"
+                  href="#"
                   rel="noreferrer"
                   target="_blank"
                   className="text-primary transition hover:text-primary/75"
@@ -98,7 +98,7 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-gray-700 transition hover:text-gray-700/75"
-                    href="/"
+                    href="#"
                   >
                     Company History
                   </Link>
@@ -107,7 +107,7 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-gray-700 transition hover:text-gray-700/75"
-                    href="/"
+                    href="#"
                   >
                     Meet the Team
                   </Link>
@@ -116,7 +116,7 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-gray-700 transition hover:text-gray-700/75"
-                    href="/"
+                    href="#"
                   >
                     Employee Handbook
                   </Link>
@@ -125,7 +125,7 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-gray-700 transition hover:text-gray-700/75"
-                    href="/"
+                    href="#"
                   >
                     Careers
                   </Link>
@@ -140,7 +140,7 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-gray-700 transition hover:text-gray-700/75"
-                    href="/"
+                    href="#"
                   >
                     Home Delivery
                   </Link>
@@ -149,7 +149,7 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-gray-700 transition hover:text-gray-700/75"
-                    href="/"
+                    href="#"
                   >
                     Store Pickup
                   </Link>
@@ -158,7 +158,7 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-gray-700 transition hover:text-gray-700/75"
-                    href="/"
+                    href="#"
                   >
                     Express Delivery
                   </Link>
@@ -173,7 +173,7 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-gray-700 transition hover:text-gray-700/75"
-                    href="/"
+                    href="#"
                   >
                     FAQs
                   </Link>
@@ -182,7 +182,7 @@ const Footer = () => {
                 <li>
                   <Link
                     className="text-gray-700 transition hover:text-gray-700/75"
-                    href="/"
+                    href="#"
                   >
                     Support
                   </Link>
@@ -191,7 +191,7 @@ const Footer = () => {
                 <li>
                   <Link
                     className="group flex gap-1.5  justify-center md:justify-start"
-                    href="/"
+                    href="#"
                   >
                     <span className="text-gray-700 transition group-hover:text-gray-700/75">
                       Live Chat
@@ -213,7 +213,7 @@ const Footer = () => {
                 <li>
                   <Link
                     className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                    href="/"
+                    href="#"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -237,7 +237,7 @@ const Footer = () => {
                 <li>
                   <Link
                     className="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
-                    href="/"
+                    href="#"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -295,7 +295,7 @@ const Footer = () => {
 
               <Link
                 className="inline-block text-primary hover:underline transition "
-                href="/"
+                href="#"
               >
                 Terms & Conditions
               </Link>
@@ -304,7 +304,7 @@ const Footer = () => {
 
               <Link
                 className="inline-block text-primary hover:underline transition "
-                href="/"
+                href="#"
               >
                 Privacy Policy
               </Link>

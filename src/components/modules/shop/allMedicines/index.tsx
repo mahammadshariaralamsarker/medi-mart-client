@@ -8,15 +8,14 @@ const AllMedicines = async ({ medicines }: { medicines: TMedicine[] }) => {
   const { data: medicineCat } = await getAllMedicineCategories();
 
   return (
-    <div className="flex gap-5 my-10 relative">
-      {/* Sidebar */}
-      <aside className="hidden lg:block w-72 sticky top-16 self-start h-[calc(100vh-4rem)] overflow-auto bg-slate-50 rounded-md shadow-sm">
+    <div className="grid lg:grid-cols-12 lg:gap-3  ">
+      <div className=" lg:block lg:col-span-3 xl:col-span-3 md:col-span-6">
         <FilterSidebar medicineCat={medicineCat} />
-      </aside> 
-      <div className="flex-1">
+      </div>
+      <div className="col-span-12 lg:col-span-9 xl:col-span-9 md:col-span-6">
         <div className="grid xl:grid-cols-3 xl:gap-5 lg:grid-cols-3 lg:gap-3 md:grid-cols-2 md:gap-3 grid-cols-1 gap-2">
           <MedicinesList medicines={medicines} />
-          <LoadMore/>
+          <LoadMore />
         </div>
       </div>
     </div>

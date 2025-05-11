@@ -75,6 +75,7 @@ export default function PaymentDetails() {
       if (res?.success) {
         toast.success(res?.message, { id: orderLoading });
         dispatch(cartClear());
+        console.log(res?.data);
         router.push(res?.data);
       }
       if (!res?.success) {

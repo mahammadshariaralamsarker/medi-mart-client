@@ -7,7 +7,8 @@ const OrdersPage = async ({
 }: {
   searchParams?: Promise<{ [key: string]: string | undefined }>;
 }) => {
-  const searchId = await searchParams;
+  const searchId = await searchParams; 
+  console.log(searchId, "searchId");
   const { data: myOrders } = await getMyOrders();
   await verifyMyOrders(searchId?.order_id as string);
 

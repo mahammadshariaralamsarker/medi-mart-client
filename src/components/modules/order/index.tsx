@@ -9,7 +9,8 @@ import { currencyFormatter } from "@/lib/currencyFormatter";
 import Stepper from "./stepper/Stepper";
 import { cn } from "@/lib/utils";
 
-const ManageOrders = ({ myOrders }: { myOrders: TOrderInfo[] }) => {
+const ManageOrders = ({ myOrders }: { myOrders: TOrderInfo[] }) => { 
+  console.log("myOrders", myOrders);
   const [isOpen, setIsOpen] = useState(false);
   const columns: ColumnDef<TOrderInfo>[] = [
     {
@@ -19,7 +20,7 @@ const ManageOrders = ({ myOrders }: { myOrders: TOrderInfo[] }) => {
         return (
           <div className="flex items-center space-x-3">
             <span className="truncate">
-              {row.original.medicines[0].medicine?.name?.slice(0, 10)}
+              {row.original.medicines[0]?.medicine?.name?.slice(0, 10)}
             </span>
           </div>
         );
@@ -100,3 +101,5 @@ const ManageOrders = ({ myOrders }: { myOrders: TOrderInfo[] }) => {
 };
 
 export default ManageOrders;
+//https://sandbox.securepay.shurjopayment.com/spaycheckout/medi-mart-client-nine.vercel.app/orders?order_id=CAR681ed9b15a6c9
+// https://medi-mart-ochre.vercel.app/orders?order_id=SP681edb0e816b9

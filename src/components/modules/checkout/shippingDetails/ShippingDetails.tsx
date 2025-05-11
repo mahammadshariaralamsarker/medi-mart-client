@@ -123,7 +123,7 @@ export default function ShippingDetails() {
                   <img
                     className="w-14 object-contain"
                     src="https://www.tbsnews.net/sites/default/files/styles/big_3/public/images/2021/09/15/shurjopay_.jpg"
-                    alt=""
+                    alt="cvv"
                   />
                   <div className="ml-5">
                     <span className="mt-2 font-semibold">Shurjo Pay</span>

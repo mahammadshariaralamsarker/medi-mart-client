@@ -18,7 +18,7 @@ import { logOutUser } from "@/services/AuthServices";
 import { usePathname, useRouter } from "next/navigation";
 import { protectedRoutes } from "@/constants";
 import { useAppSelector } from "@/redux/hooks";
-import { cartMedicineSelector } from "@/redux/features/cart/cartSlice";
+import { cartMedicineSelector } from "@/redux/features/cart/cartSlice"; 
 export default function Navbar() {
   const { user, setIsLoading } = useUser(); 
   const pathname = usePathname();
@@ -37,8 +37,7 @@ export default function Navbar() {
     <header className="border-b  bg-white w-full fixed top-0 z-50 shadow-sm">
       <div className="container flex justify-between items-center mx-auto h-16 px-3">
       <h1 className=" text-lg md:text-2xl font-black flex items-center">
-        <Logo />
-        <Link href="/">Medi Mart</Link>
+        {<Logo />} 
       </h1>
       <div className="max-w-lg hidden md:flex flex-grow">
         <nav>

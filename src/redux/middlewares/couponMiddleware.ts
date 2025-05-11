@@ -14,7 +14,6 @@ export const couponMiddleware = (store:Store)=>(next:Dispatch)=>(action:Action)=
         };
         store.dispatch(fetchCoupon(modefiedData) as unknown as Action);
     }else{
-
         next(action)
     }
 }
